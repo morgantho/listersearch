@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-#pip install elasticsearch==7.13.0 elasticsearch-dsl
-import requests, json, argparse, meilisearch, os, sys, hashlib
+import requests, json, argparse, meilisearch, os, hashlib
 from bs4 import BeautifulSoup
 
 parser = argparse.ArgumentParser()
@@ -10,7 +9,6 @@ parser.add_argument('--end', required=True, help="Year-Month to stop at", metava
 args = parser.parse_args()
 
 output = 'completed-ms.txt'
-index_file = f'{args.start}.json'
 
 # open data file
 with open(args.file) as f: 
@@ -128,6 +126,7 @@ def main():
     sl = os.environ["URL"]
     key = os.environ["MASTER_KEY"]
     client = meilisearch.Client(sl, key)
+    
     print(f'Starting {args.start}')
     extract_fmt_push(client, 'lister')
 
