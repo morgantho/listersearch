@@ -42,8 +42,8 @@ search.addWidgets([
           <div class="hit-description">
             {{#helpers.snippet}}{ "attribute": "entry" }{{/helpers.snippet}}
           </div>
-          <div class="hit-info">credit: {{credit}}</div>
-          <div class="hit-info">transcript: <a href="{{transcript}}" target="_blank">{{transcript}}</a></div>
+          <div class="hit-info">Transcript: <a href="{{transcript}}" target="_blank">{{transcript}}</a></div>
+          <div class="hit-info">Transcription credit: {{credit}}</div>
         </div>
       `
     }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css"
+    />
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="stylesheet" href="./src/app.css" />
+
+    <title>ListerSearch</title>
+  </head>
+  <body>
+    <div class="ais-InstantSearch">
+      <h1>ListerSearch</h1>
+      <h2>Search through transcriptions of Anne Lister's journals</h2>
+      <p>
+        Currently available: 1834-01 - 1837-01
+      </p>
+
+      <div class="left-panel">
+        <div id="clear-refinements"></div>
+
+        <h2>Credit</h2>
+        <div id="credit-list"></div>
+        <h2>Type</h2>
+        <div id="type-list"></div>
+
+        <h3>Info</h3>
+        <p><a href="https://github.com/morgantho/listersearch">Source Code</a></p>
+        <p>Data powered by <a href="https://github.com/JiangJY-713/AL_Index">AL_Index</a></p>
+      </div>
+
+      <div class="right-panel">
+        <div id="searchbox" class="ais-SearchBox"></div>
+        <div id="hits"></div>
+        <div id="pagination"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+    <script src="./src/app.js"></script>
+  </body>
+</html>

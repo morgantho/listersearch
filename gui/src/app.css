@@ -33,6 +33,7 @@ body {
   .ais-Hits-item {
     margin-bottom: 1em;
     width: calc(100% - 1rem);
+    background-color: white;
   }
   
   .ais-Hits-item img {
@@ -44,14 +45,16 @@ body {
   
   .hit-name {
     margin-bottom: 0.5em;
+    font-weight: bold;
   }
   
   .hit-description {
     font-size: 90%;
     margin-bottom: 0.5em;
-    color: grey;
+    color: darkgrey;
   }
   
   .hit-info {
-    font-size: 90%;
+    font-size: 80%;
+    color: black;
   }  
