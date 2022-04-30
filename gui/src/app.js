@@ -49,7 +49,8 @@ search.addWidgets([
     }
   }),
   instantsearch.widgets.pagination({
-    container: "#pagination"
+    container: "#pagination",
+    showLast: false
   })
 ]);
 
