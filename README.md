@@ -5,7 +5,7 @@ ListerSearch is a search engine powered by Meilisearch to search through publica
 
 ## Status
 
-[Updates](https://listersearch.pagefate.com/)
+- [Updates](https://listersearch.pagefate.com/)
 
 ## Usage
 
