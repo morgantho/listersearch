@@ -5,9 +5,7 @@ ListerSearch is a search engine powered by Meilisearch to search through publica
 
 ## Status
 
-- 1834-01 - 1839-12 have been loaded
-    - search will be limited while this is being indexed
-- 1839-01 - 1839-05 will be loaded next
+[Updates](https://listersearch.pagefate.com/)
 
 ## Usage
 
