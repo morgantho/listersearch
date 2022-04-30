@@ -102,6 +102,7 @@ def extract_fmt_push(c, index):
                     tlink = t.get('link')
                     hash = hashlib.md5(tlink.encode())
                     id = hash.hexdigest()
+                    year = date[0:4]
                     doc = [{
                         'id': id, 
                         'date': date, 
@@ -109,7 +110,8 @@ def extract_fmt_push(c, index):
                         'credit': credit, 
                         'type': type, 
                         'entry': entry,
-                        'transcript': tlink
+                        'transcript': tlink,
+                        'year': year
                     }]
                     
                     print(f"PUSH FOR {date} BY {credit}" )
