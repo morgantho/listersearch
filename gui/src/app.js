@@ -19,6 +19,12 @@ search.addWidgets([
     container: "#clear-refinements"
   }),
   instantsearch.widgets.refinementList({
+    container: "#year-list",
+    attribute: "year",
+    limit: 5, 
+    showMore: true
+  }),
+  instantsearch.widgets.refinementList({
     container: "#credit-list",
     attribute: "credit"
   }),
