@@ -36,10 +36,26 @@ def get_entry(url):
                 
                     if 'tumblr' in u2:
                         try:
-                            txt =soup.find("div", class_="template-post-content-body").get_text() 
+                            txt = soup.find("div", class_="template-post-content-body").get_text() 
                             return txt
                         except:
-                            print(f'ERROR_URL: {url}')
+                            u3 = u2
+                            
+                        if 'tumblr' in u3:
+                            try:
+                                txt = soup.find("div", class_="text").get_text()
+                                return txt
+                            except:
+                                u4 = u3
+                                     
+                            if 'tumblr' in u4:
+                                try:
+                                    txt = soup.find("div", class_="caption_content").get_text()
+                                    return txt
+                                except:                                
+                                    print(f'ERROR_URL: {url}')
+
+
 
     if 'blogspot' in url:
         try:
@@ -91,6 +107,10 @@ def extract_fmt_push(c, index):
                     elif "drive.google.com" in t.get('link'):
                         break
                     elif "annelisternorway.com" in t.get('link'):
+                        break
+                    elif "xldev.co.uk" in t.get('link'):
+                        break
+                    elif "tolerablygoodtranscriptions" in t.get('link'):
                         break
 
                     body = get_entry(t.get('link'))
