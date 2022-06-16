@@ -63,6 +63,13 @@ def get_entry(url):
             return txt
         except:
             print(f'ERROR_URL: {url}')
+
+    if 'wordpress' in url:
+        try:
+            txt = soup.find("div", class_="entry-content").get_text()
+            return txt
+        except:
+            print(f'ERROR_URL: {url}')
         
 
 def wyas_extract(data):
@@ -94,24 +101,26 @@ def extract_fmt_push(c, index):
         date = w.get('date')
     
         if args.start in date:
-
+            
             for x in d['Tr']:
                 if x['link']:
                     t = tr_extract(x)
                     
                     # skipping these sources as the formatting is difficult to work with
                     if t.get('credit') == 'ISAW':
-                        break
+                        continue
                     elif "insearchofannwalker.com" in t.get('link'):
-                        break
+                        continue
                     elif "drive.google.com" in t.get('link'):
-                        break
+                        continue
                     elif "annelisternorway.com" in t.get('link'):
-                        break
+                        continue
                     elif "xldev.co.uk" in t.get('link'):
-                        break
+                        continue
                     elif "tolerablygoodtranscriptions" in t.get('link'):
-                        break
+                        continue
+                    elif "curioustravellers" in t.get("link"):
+                        continue
 
                     body = get_entry(t.get('link'))
                     entry = body.replace('\n', ' ').replace('\t', '').replace('\r', '').encode("ascii", "ignore").decode()
@@ -134,7 +143,7 @@ def extract_fmt_push(c, index):
                         'year': year
                     }]
                     
-                    print(f"PUSH FOR {date} BY {credit}" )
+                    print(f"PUSH FOR {date} BY {credit}")
                     c.index(index).update_documents(doc)
                     
     
